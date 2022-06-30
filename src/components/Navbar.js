@@ -1,34 +1,50 @@
 import React from "react"
-import logo from "../assets/logo.png"
+// import logo from "../assets/logo-2.jpg"
 import styled from "styled-components"
 import { CgMenuLeftAlt } from "react-icons/cg"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Navbar = () => {
   return (
     <Wrapper>
       <div className="nav-center wrapper">
         <div className="nav-header">
-          <img src={logo} alt="Salavat Logo" className="logo" />
+          <div className="logo-container">
+            <StaticImage
+              src="../assets/logo.png"
+              alt="Salavat Logo"
+              className="logo"
+              layout="fixed"
+              height={50}
+            />
+            <span>Москва</span>
+          </div>
           <button className="toggle-btn">
             <CgMenuLeftAlt />
           </button>
         </div>
-        <div className="nav-links"></div>
       </div>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.nav`
+  margin-top: 1rem;
   height: 4rem;
-  display: grid;
-  place-items: center;
-
+  /* display: grid;
+  place-items: center; */
   /*background-color: black; /* border: 1px solid black; */
   .nav-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+  .logo-container {
+    text-align: center;
+  }
+  span {
+    color: #dadcdb;
+    font-size: 0.6rem;
   }
   .toggle-btn {
     display: grid;
@@ -38,7 +54,7 @@ const Wrapper = styled.nav`
     color: white;
   }
   .logo {
-    height: 3.6rem;
+    height: 3rem;
   }
 `
 

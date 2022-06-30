@@ -19,3 +19,14 @@ a {
   max-width: 1200px;
   margin: 0 auto;
 }
+img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+.btn {
+  display: block;
+  padding: 0.45rem 1rem;
+  border-radius: 0.25rem;
+  border: transparent;
+}
